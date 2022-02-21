@@ -1,0 +1,18 @@
+name: 'Bugzilla Crosslink'
+description: 'Cross-posts links between pull requests and Bugzilla issues'
+inputs:
+  githubToken:
+    description: 'GitHub auth token with access to post to pull requests'
+    required: true
+  bugzillaURL:
+    description: 'URL of the bugzilla API to post to'
+    # required: true
+  bugzillaKey:
+    description: 'Bugzilla API key'
+    # required: true
+  bugzilla-issue-number:
+    description: 'Number of a Bugzilla issue to reference'
+runs:
+  using: 'node16'
+  main: 'index.js'
+
