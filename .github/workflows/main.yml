@@ -1,0 +1,15 @@
+on:
+  issue_comment:
+    types: [created, edited, deleted]
+
+jobs:
+  bugzilla_crosslink_job:
+    runs-on: ubuntu-latest
+    name: A job to crosslink pull requests and bugzilla issues
+    steps:
+      - name: Bugzilla crosslink action step
+        id: crosslink
+        uses: njhale/bugzilla-crosslink-action@v1.1
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+
