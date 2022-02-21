@@ -8482,7 +8482,7 @@ const bzURL = core.getInput('bugzillaURL');
 async function run() {
 
     const context = github.context;
-    const octokit = github.getOctokit(myToken)
+    const octokit = github.getOctokit(ghToken)
     
 
     payload = JSON.stringify(context.payload, undefined, 2);
